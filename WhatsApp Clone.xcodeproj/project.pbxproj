@@ -10,9 +10,9 @@
 		18815B8627EFB886006EAB54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18815B8527EFB886006EAB54 /* AppDelegate.swift */; };
 		18815B8827EFB886006EAB54 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18815B8727EFB886006EAB54 /* SceneDelegate.swift */; };
 		18815B8A27EFB886006EAB54 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18815B8927EFB886006EAB54 /* ViewController.swift */; };
-		18815B8D27EFB886006EAB54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18815B8B27EFB886006EAB54 /* Main.storyboard */; };
 		18815B8F27EFB88A006EAB54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18815B8E27EFB88A006EAB54 /* Assets.xcassets */; };
 		18815B9227EFB88A006EAB54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18815B9027EFB88A006EAB54 /* LaunchScreen.storyboard */; };
+		18815B9A27EFB9E2006EAB54 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18815B9927EFB9E2006EAB54 /* CustomTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +20,10 @@
 		18815B8527EFB886006EAB54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18815B8727EFB886006EAB54 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		18815B8927EFB886006EAB54 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		18815B8C27EFB886006EAB54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18815B8E27EFB88A006EAB54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18815B9127EFB88A006EAB54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18815B9327EFB88A006EAB54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18815B9927EFB9E2006EAB54 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +56,31 @@
 		18815B8427EFB886006EAB54 /* WhatsApp Clone */ = {
 			isa = PBXGroup;
 			children = (
-				18815B8527EFB886006EAB54 /* AppDelegate.swift */,
-				18815B8727EFB886006EAB54 /* SceneDelegate.swift */,
-				18815B8927EFB886006EAB54 /* ViewController.swift */,
-				18815B8B27EFB886006EAB54 /* Main.storyboard */,
+				18815B9C27EFCC31006EAB54 /* Shared */,
+				18815B9B27EFCC25006EAB54 /* Controllers */,
 				18815B8E27EFB88A006EAB54 /* Assets.xcassets */,
 				18815B9027EFB88A006EAB54 /* LaunchScreen.storyboard */,
 				18815B9327EFB88A006EAB54 /* Info.plist */,
 			);
 			path = "WhatsApp Clone";
+			sourceTree = "<group>";
+		};
+		18815B9B27EFCC25006EAB54 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				18815B9927EFB9E2006EAB54 /* CustomTabBarController.swift */,
+				18815B8927EFB886006EAB54 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		18815B9C27EFCC31006EAB54 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				18815B8527EFB886006EAB54 /* AppDelegate.swift */,
+				18815B8727EFB886006EAB54 /* SceneDelegate.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +143,6 @@
 			files = (
 				18815B9227EFB88A006EAB54 /* LaunchScreen.storyboard in Resources */,
 				18815B8F27EFB88A006EAB54 /* Assets.xcassets in Resources */,
-				18815B8D27EFB886006EAB54 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18815B8A27EFB886006EAB54 /* ViewController.swift in Sources */,
+				18815B9A27EFB9E2006EAB54 /* CustomTabBarController.swift in Sources */,
 				18815B8627EFB886006EAB54 /* AppDelegate.swift in Sources */,
 				18815B8827EFB886006EAB54 /* SceneDelegate.swift in Sources */,
 			);
@@ -147,14 +163,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		18815B8B27EFB886006EAB54 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				18815B8C27EFB886006EAB54 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		18815B9027EFB88A006EAB54 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -294,9 +302,9 @@
 				INFOPLIST_FILE = "WhatsApp Clone/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,7 +314,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -322,9 +330,9 @@
 				INFOPLIST_FILE = "WhatsApp Clone/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -334,7 +342,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
