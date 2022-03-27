@@ -86,6 +86,14 @@ class ChatTableViewCell: UITableViewCell {
 		setupViewCode()
 	}
 
+	override func prepareForReuse() {
+		super.prepareForReuse()
+		self.photoImageView.image = nil
+		self.personNameLabel.text = nil
+		self.messageLabel.text = nil
+		self.hourLabel.text = nil
+		self.readLabel.text = nil
+	}
 }
 
 // MARK: Setup View Code
@@ -125,10 +133,8 @@ extension ChatTableViewCell: ViewCode {
 	}
 
 	func configureViews() {
-		DispatchQueue.main.async { [unowned self] in
-			self.photoImageView.layer.cornerRadius = self.photoImageView.frame.height / 2
-			self.readLabel.layer.cornerRadius = self.readLabel.frame.height / 2
-		}
+		self.photoImageView.layer.cornerRadius = 30
+		self.readLabel.layer.cornerRadius = 7.5
 	}
 
 }

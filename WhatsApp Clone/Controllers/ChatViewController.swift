@@ -10,29 +10,7 @@ import UIKit
 class ChatViewController: UIViewController {
 
 	// MARK: - Model
-	var chats: [ChatCellViewModel] = [
-		ChatCellViewModel(
-			id: UUID(),
-			image: "imageTest",
-			name: "Alley Pereira",
-			message: "Estou realizando um teste aqui rapidinho ta beleza?",
-			hour: "23:23", unreadMessagesCount: 0
-		),
-		ChatCellViewModel(
-			id: UUID(),
-			image: "imageTest",
-			name: "Alley Pereira",
-			message: "Estou realizando um teste aqui rapidinho ta beleza?",
-			hour: "23:23", unreadMessagesCount: 23
-		),
-		ChatCellViewModel(
-			id: UUID(),
-			image: "imageTest",
-			name: "Alley Pereira",
-			message: "Estou realizando um teste aqui rapidinho ta beleza?",
-			hour: "23:23", unreadMessagesCount: 23
-		)
-	] {
+	var chats: [ChatCellViewModel] = [] {
 		didSet {
 			chatView.tableView.reloadData()
 		}
@@ -59,10 +37,29 @@ class ChatViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
+		mockChats(amount: 1)
+		mockChats(amount: 12, unreadMessages: 30)
+
 		view.backgroundColor = .systemBackground
 
 		chatView.tableView.delegate = self
 		chatView.tableView.dataSource = self
+	}
+
+	// MARK: MOCK
+	private func mockChats(amount: Int, unreadMessages: Int = 0) {
+		for _ in 0..<amount {
+			chats.append(
+				ChatCellViewModel(
+					id: UUID(),
+					image: "imageTest",
+					name: "Alley Pereira",
+					message: "Estou realizando um teste aqui rapidinho ta beleza?",
+					hour: "23:23",
+					unreadMessagesCount: unreadMessages == 0 ? 0 : Int.random(in: 1...unreadMessages)
+				)
+			)
+		}
 	}
 
 }
