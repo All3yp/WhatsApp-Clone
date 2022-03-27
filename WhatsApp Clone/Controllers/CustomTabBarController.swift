@@ -14,6 +14,7 @@ class CustomTabBarController: UITabBarController {
 
 		configTabbar()
 		tabBar.backgroundColor = .gray.withAlphaComponent(0.1)
+		self.selectedIndex = 3
 	}
 
 	private func configTabbar() {
@@ -33,7 +34,6 @@ class CustomTabBarController: UITabBarController {
 		]
 	}
 
-
 	private func embledNav(
 		viewController: UIViewController,
 		title: String,
@@ -45,6 +45,5 @@ class CustomTabBarController: UITabBarController {
 		nav.tabBarItem.image = UIImage(systemName: image)
 		return nav
 	}
-
 
 }
