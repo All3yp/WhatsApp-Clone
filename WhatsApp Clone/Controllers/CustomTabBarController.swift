@@ -18,11 +18,11 @@ class CustomTabBarController: UITabBarController {
 
 	private func configTabbar() {
 
-		let statusVC = ViewController(titleNav: "Status")
-		let callsVC = ViewController(titleNav: "Calls")
-		let cameraVC = ViewController(titleNav: "Camera")
-		let chatsVC = ViewController(titleNav: "Chats")
-		let settingsVC = ViewController(titleNav: "Settings")
+		let statusVC = StatusViewController(titleNav: "Status")
+		let callsVC = CallsViewController(titleNav: "Calls")
+		let cameraVC = CameraViewController(titleNav: "Camera")
+		let chatsVC = ChatViewController(titleNav: "Chats")
+		let settingsVC = SettingsViewController(titleNav: "Settings")
 
 		self.viewControllers = [
 			embledNav(viewController: statusVC, title: "Status", image: "circle.dashed.inset.filled"),
