@@ -9,21 +9,43 @@
 /* Begin PBXBuildFile section */
 		18815B8627EFB886006EAB54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18815B8527EFB886006EAB54 /* AppDelegate.swift */; };
 		18815B8827EFB886006EAB54 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18815B8727EFB886006EAB54 /* SceneDelegate.swift */; };
-		18815B8A27EFB886006EAB54 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18815B8927EFB886006EAB54 /* ViewController.swift */; };
+		18815B8A27EFB886006EAB54 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18815B8927EFB886006EAB54 /* ChatViewController.swift */; };
 		18815B8F27EFB88A006EAB54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18815B8E27EFB88A006EAB54 /* Assets.xcassets */; };
 		18815B9227EFB88A006EAB54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18815B9027EFB88A006EAB54 /* LaunchScreen.storyboard */; };
 		18815B9A27EFB9E2006EAB54 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18815B9927EFB9E2006EAB54 /* CustomTabBarController.swift */; };
+		18815B9E27EFCC6C006EAB54 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18815B9D27EFCC6C006EAB54 /* ChatView.swift */; };
+		18815BA227EFCD6B006EAB54 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18815BA127EFCD6B006EAB54 /* UIView+Ext.swift */; };
+		18815BA427EFCE3B006EAB54 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18815BA327EFCE3B006EAB54 /* ChatTableViewCell.swift */; };
+		18815BA827EFCFE1006EAB54 /* ChatCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18815BA727EFCFE1006EAB54 /* ChatCellViewModel.swift */; };
+		18815BAA27EFD0E2006EAB54 /* WhatsAppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18815BA927EFD0E2006EAB54 /* WhatsAppModel.swift */; };
+		18815BAF27EFE9F5006EAB54 /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18815BAE27EFE9F5006EAB54 /* ViewCode.swift */; };
+		18815BB127EFFDBB006EAB54 /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18815BB027EFFDBB006EAB54 /* StatusViewController.swift */; };
+		18815BB327EFFDCB006EAB54 /* CallsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18815BB227EFFDCB006EAB54 /* CallsViewController.swift */; };
+		18815BB527EFFDD7006EAB54 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18815BB427EFFDD7006EAB54 /* CameraViewController.swift */; };
+		18815BB727EFFDEB006EAB54 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18815BB627EFFDEB006EAB54 /* SettingsViewController.swift */; };
+		18815BB927F0EECF006EAB54 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18815BB827F0EECF006EAB54 /* PaddingLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		18815B8227EFB886006EAB54 /* WhatsApp Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WhatsApp Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18815B8527EFB886006EAB54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18815B8727EFB886006EAB54 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		18815B8927EFB886006EAB54 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		18815B8927EFB886006EAB54 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		18815B8E27EFB88A006EAB54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18815B9127EFB88A006EAB54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18815B9327EFB88A006EAB54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18815B9927EFB9E2006EAB54 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		18815B9D27EFCC6C006EAB54 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		18815BA127EFCD6B006EAB54 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		18815BA327EFCE3B006EAB54 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
+		18815BA727EFCFE1006EAB54 /* ChatCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCellViewModel.swift; sourceTree = "<group>"; };
+		18815BA927EFD0E2006EAB54 /* WhatsAppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsAppModel.swift; sourceTree = "<group>"; };
+		18815BAE27EFE9F5006EAB54 /* ViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
+		18815BB027EFFDBB006EAB54 /* StatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
+		18815BB227EFFDCB006EAB54 /* CallsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallsViewController.swift; sourceTree = "<group>"; };
+		18815BB427EFFDD7006EAB54 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		18815BB627EFFDEB006EAB54 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		18815BB827F0EECF006EAB54 /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +79,9 @@
 			isa = PBXGroup;
 			children = (
 				18815B9C27EFCC31006EAB54 /* Shared */,
+				18815BA627EFCFC9006EAB54 /* Model */,
+				18815BAD27EFE72E006EAB54 /* ViewModel */,
+				18815B9F27EFCC6F006EAB54 /* Views */,
 				18815B9B27EFCC25006EAB54 /* Controllers */,
 				18815B8E27EFB88A006EAB54 /* Assets.xcassets */,
 				18815B9027EFB88A006EAB54 /* LaunchScreen.storyboard */,
@@ -69,7 +94,11 @@
 			isa = PBXGroup;
 			children = (
 				18815B9927EFB9E2006EAB54 /* CustomTabBarController.swift */,
-				18815B8927EFB886006EAB54 /* ViewController.swift */,
+				18815B8927EFB886006EAB54 /* ChatViewController.swift */,
+				18815BB027EFFDBB006EAB54 /* StatusViewController.swift */,
+				18815BB227EFFDCB006EAB54 /* CallsViewController.swift */,
+				18815BB427EFFDD7006EAB54 /* CameraViewController.swift */,
+				18815BB627EFFDEB006EAB54 /* SettingsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -79,8 +108,52 @@
 			children = (
 				18815B8527EFB886006EAB54 /* AppDelegate.swift */,
 				18815B8727EFB886006EAB54 /* SceneDelegate.swift */,
+				18815BAE27EFE9F5006EAB54 /* ViewCode.swift */,
+				18815BA027EFCD57006EAB54 /* Extensions */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		18815B9F27EFCC6F006EAB54 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				18815B9D27EFCC6C006EAB54 /* ChatView.swift */,
+				18815BA527EFCE3F006EAB54 /* Cells */,
+				18815BB827F0EECF006EAB54 /* PaddingLabel.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		18815BA027EFCD57006EAB54 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				18815BA127EFCD6B006EAB54 /* UIView+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		18815BA527EFCE3F006EAB54 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				18815BA327EFCE3B006EAB54 /* ChatTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		18815BA627EFCFC9006EAB54 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				18815BA927EFD0E2006EAB54 /* WhatsAppModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18815BAD27EFE72E006EAB54 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				18815BA727EFCFE1006EAB54 /* ChatCellViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,10 +226,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18815B8A27EFB886006EAB54 /* ViewController.swift in Sources */,
+				18815BB327EFFDCB006EAB54 /* CallsViewController.swift in Sources */,
+				18815B8A27EFB886006EAB54 /* ChatViewController.swift in Sources */,
 				18815B9A27EFB9E2006EAB54 /* CustomTabBarController.swift in Sources */,
+				18815BA227EFCD6B006EAB54 /* UIView+Ext.swift in Sources */,
+				18815BB127EFFDBB006EAB54 /* StatusViewController.swift in Sources */,
+				18815B9E27EFCC6C006EAB54 /* ChatView.swift in Sources */,
+				18815BB927F0EECF006EAB54 /* PaddingLabel.swift in Sources */,
+				18815BA427EFCE3B006EAB54 /* ChatTableViewCell.swift in Sources */,
+				18815BB727EFFDEB006EAB54 /* SettingsViewController.swift in Sources */,
 				18815B8627EFB886006EAB54 /* AppDelegate.swift in Sources */,
 				18815B8827EFB886006EAB54 /* SceneDelegate.swift in Sources */,
+				18815BAF27EFE9F5006EAB54 /* ViewCode.swift in Sources */,
+				18815BB527EFFDD7006EAB54 /* CameraViewController.swift in Sources */,
+				18815BA827EFCFE1006EAB54 /* ChatCellViewModel.swift in Sources */,
+				18815BAA27EFD0E2006EAB54 /* WhatsAppModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
