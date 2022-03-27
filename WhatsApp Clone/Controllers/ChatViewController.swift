@@ -13,21 +13,21 @@ class ChatViewController: UIViewController {
 	var chats: [ChatCellViewModel] = [
 		ChatCellViewModel(
 			id: UUID(),
-			image:  "imageTest",
+			image: "imageTest",
 			name: "Alley Pereira",
 			message: "Estou realizando um teste aqui rapidinho ta beleza?",
 			hour: "23:23", unreadMessagesCount: 0
 		),
 		ChatCellViewModel(
 			id: UUID(),
-			image:  "imageTest",
+			image: "imageTest",
 			name: "Alley Pereira",
 			message: "Estou realizando um teste aqui rapidinho ta beleza?",
 			hour: "23:23", unreadMessagesCount: 23
 		),
 		ChatCellViewModel(
 			id: UUID(),
-			image:  "imageTest",
+			image: "imageTest",
 			name: "Alley Pereira",
 			message: "Estou realizando um teste aqui rapidinho ta beleza?",
 			hour: "23:23", unreadMessagesCount: 23

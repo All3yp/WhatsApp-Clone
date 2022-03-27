@@ -40,7 +40,7 @@ extension ChatView: ViewCode {
 			tableView.topAnchor.constraint(equalTo: self.topAnchor),
 			tableView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
 			tableView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-			tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+			tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
 		])
 	}
 
