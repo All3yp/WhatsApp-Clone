@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ChatViewController.swift
 //  WhatsApp Clone
 //
 //  Created by Alley Pereira on 26/03/22.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ChatViewController: UIViewController {
 
 
 	init(titleNav: String) {
