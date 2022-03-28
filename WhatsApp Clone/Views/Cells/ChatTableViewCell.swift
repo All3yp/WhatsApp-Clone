@@ -118,6 +118,7 @@ extension ChatTableViewCell: ViewCode {
 			nameAndMsgStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10),
 
 			hourLabel.topAnchor.constraint(equalTo: nameAndMsgStackView.topAnchor),
+			hourLabel.widthAnchor.constraint(equalToConstant: 80),
 			hourLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
 			hourLabel.leadingAnchor.constraint(equalTo: nameAndMsgStackView.trailingAnchor, constant: 10),
 
@@ -131,9 +132,9 @@ extension ChatTableViewCell: ViewCode {
 	}
 
 	func configureViews() {
-		self.selectionStyle = .none
 		self.photoImageView.layer.cornerRadius = 30
 		self.readLabel.layer.cornerRadius = 7.5
+		self.hourLabel.textAlignment = .right
 	}
 
 }

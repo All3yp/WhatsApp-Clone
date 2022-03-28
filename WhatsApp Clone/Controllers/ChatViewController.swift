@@ -18,10 +18,34 @@ class ChatViewController: UIViewController {
 		}
 	}
 
+	var filteredChats: [ChatCellViewModel] {
+		chats.filter {
+			if let searchText = searchController.searchBar.text?.lowercased(), !searchText.isEmpty {
+				return $0.name.lowercased().contains(searchText) ||
+				$0.message.lowercased().contains(searchText) ||
+				$0.hour.lowercased().contains(searchText)
+			} else {
+				return true
+			}
+		}
+	}
+
+	var contacts: [Profile] = []
+
 	let api = GetWhatsAppService()
 
 	// MARK: - Views
 	private let chatView: ChatView = ChatView(frame: UIScreen.main.bounds)
+
+	private lazy var searchController: UISearchController = {
+		let search = UISearchController(searchResultsController: nil)
+		search.searchBar.placeholder = "Search"
+		search.searchBar.sizeToFit()
+		search.searchBar.backgroundColor = .clear
+		search.searchBar.searchBarStyle = .minimal
+		search.searchResultsUpdater = self
+		return search
+	}()
 
 	// MARK: - View lifecycle
 	init(titleNav: String) {
@@ -43,10 +67,17 @@ class ChatViewController: UIViewController {
 
 		fetchAPI()
 		setupNavBarWithSharedButton()
+		setupNavigationWithSearch()
 		removeLineUnderNavigationBar()
 
 		chatView.tableView.delegate = self
 		chatView.tableView.dataSource = self
+
+	}
+
+	private func setupNavigationWithSearch() {
+		navigationItem.searchController = searchController
+		navigationItem.hidesSearchBarWhenScrolling = false
 	}
 
 	func removeLineUnderNavigationBar() {
@@ -58,9 +89,16 @@ class ChatViewController: UIViewController {
 
 	private func fetchAPI() {
 		api.fetch { zap in
-			zap?.profile.friends?.forEach { friend in
+
+			guard let zap = zap else { return }
+
+			// load chats
+			zap.profile.friends?.forEach { friend in
 				self.chats.append(ChatCellViewModel.init(friendModel: friend))
 			}
+
+			// store contacts
+			self.contacts = zap.allFriends
 		}
 	}
 
@@ -82,7 +120,11 @@ class ChatViewController: UIViewController {
 	}
 
 	@objc func newChatAction() {
-		print("New Chat action")
+		let contactsVC = ContactsViewController()
+		contactsVC.contacts = contacts
+		contactsVC.modalPresentationStyle = .formSheet
+		let newNav = UINavigationController(rootViewController: contactsVC)
+		self.present(newNav, animated: true, completion: nil)
 	}
 
 	private func setUpToolbar() -> UIToolbar {
@@ -121,12 +163,12 @@ class ChatViewController: UIViewController {
 extension ChatViewController: UITableViewDataSource {
 
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return chats.count
+		return filteredChats.count
 	}
 
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = ChatTableViewCell()
-		cell.setupCellModel(chats[indexPath.row])
+		cell.setupCellModel(filteredChats[indexPath.row])
 		return cell
 	}
 
@@ -142,4 +184,10 @@ extension ChatViewController: UITableViewDelegate {
 		return UITableViewCell.EditingStyle.init(rawValue: 3)!
 	}
 
+}
+
+extension ChatViewController: UISearchResultsUpdating {
+	func updateSearchResults(for searchController: UISearchController) {
+		chatView.tableView.reloadData()
+	}
 }

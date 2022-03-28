@@ -18,7 +18,7 @@ struct Profile: Codable {
 	let id: Int
 	let name: String
 	let picture: String
-	let status: Status?
+	let status: String?
 	let chatlog: [Chatlog]?
 	let friends: [Friend]?
 }
@@ -46,9 +46,4 @@ struct Friend: Codable {
 		case latestTimestamp = "latest_timestamp"
 		case lastChat
 	}
-}
-
-enum Status: String, Codable {
-	case available = "Available"
-	case busy = "Busy"
 }
