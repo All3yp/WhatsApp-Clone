@@ -14,7 +14,6 @@
 		18815B9227EFB88A006EAB54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18815B9027EFB88A006EAB54 /* LaunchScreen.storyboard */; };
 		18815B9A27EFB9E2006EAB54 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18815B9927EFB9E2006EAB54 /* CustomTabBarController.swift */; };
 		18815B9E27EFCC6C006EAB54 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18815B9D27EFCC6C006EAB54 /* ChatView.swift */; };
-		18815BA227EFCD6B006EAB54 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18815BA127EFCD6B006EAB54 /* UIView+Ext.swift */; };
 		18815BA427EFCE3B006EAB54 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18815BA327EFCE3B006EAB54 /* ChatTableViewCell.swift */; };
 		18815BA827EFCFE1006EAB54 /* ChatCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18815BA727EFCFE1006EAB54 /* ChatCellViewModel.swift */; };
 		18815BAA27EFD0E2006EAB54 /* WhatsAppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18815BA927EFD0E2006EAB54 /* WhatsAppModel.swift */; };
@@ -24,6 +23,11 @@
 		18815BB527EFFDD7006EAB54 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18815BB427EFFDD7006EAB54 /* CameraViewController.swift */; };
 		18815BB727EFFDEB006EAB54 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18815BB627EFFDEB006EAB54 /* SettingsViewController.swift */; };
 		18815BB927F0EECF006EAB54 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18815BB827F0EECF006EAB54 /* PaddingLabel.swift */; };
+		18C1DAF227F11D9200051EAB /* UIImageView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C1DAF027F11D9200051EAB /* UIImageView+Ext.swift */; };
+		18C1DAF327F11D9200051EAB /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C1DAF127F11D9200051EAB /* UIView+Ext.swift */; };
+		18C1DAF927F11E2800051EAB /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C1DAF627F11E2800051EAB /* ServiceError.swift */; };
+		18C1DAFA27F11E2800051EAB /* GetWhatsAppService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C1DAF727F11E2800051EAB /* GetWhatsAppService.swift */; };
+		18C1DAFB27F11E2800051EAB /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C1DAF827F11E2800051EAB /* Service.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +50,12 @@
 		18815BB427EFFDD7006EAB54 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		18815BB627EFFDEB006EAB54 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		18815BB827F0EECF006EAB54 /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
+		18815BC227F118B4006EAB54 /* UIImageView+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Ext.swift"; sourceTree = "<group>"; };
+		18C1DAF027F11D9200051EAB /* UIImageView+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Ext.swift"; sourceTree = "<group>"; };
+		18C1DAF127F11D9200051EAB /* UIView+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		18C1DAF627F11E2800051EAB /* ServiceError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceError.swift; path = Core/ServiceError.swift; sourceTree = "<group>"; };
+		18C1DAF727F11E2800051EAB /* GetWhatsAppService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetWhatsAppService.swift; path = Core/GetWhatsAppService.swift; sourceTree = "<group>"; };
+		18C1DAF827F11E2800051EAB /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Service.swift; path = Core/Service.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +88,8 @@
 		18815B8427EFB886006EAB54 /* WhatsApp Clone */ = {
 			isa = PBXGroup;
 			children = (
+				18C1DAEF27F11D9200051EAB /* Extensions */,
+				18815BBB27F0F90B006EAB54 /* Core */,
 				18815B9C27EFCC31006EAB54 /* Shared */,
 				18815BA627EFCFC9006EAB54 /* Model */,
 				18815BAD27EFE72E006EAB54 /* ViewModel */,
@@ -117,9 +129,9 @@
 		18815B9F27EFCC6F006EAB54 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				18815BB827F0EECF006EAB54 /* PaddingLabel.swift */,
 				18815B9D27EFCC6C006EAB54 /* ChatView.swift */,
 				18815BA527EFCE3F006EAB54 /* Cells */,
-				18815BB827F0EECF006EAB54 /* PaddingLabel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -127,6 +139,7 @@
 		18815BA027EFCD57006EAB54 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				18815BC227F118B4006EAB54 /* UIImageView+Ext.swift */,
 				18815BA127EFCD6B006EAB54 /* UIView+Ext.swift */,
 			);
 			path = Extensions;
@@ -154,6 +167,25 @@
 				18815BA727EFCFE1006EAB54 /* ChatCellViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		18815BBB27F0F90B006EAB54 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				18C1DAF727F11E2800051EAB /* GetWhatsAppService.swift */,
+				18C1DAF827F11E2800051EAB /* Service.swift */,
+				18C1DAF627F11E2800051EAB /* ServiceError.swift */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		18C1DAEF27F11D9200051EAB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				18C1DAF027F11D9200051EAB /* UIImageView+Ext.swift */,
+				18C1DAF127F11D9200051EAB /* UIView+Ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,18 +279,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18C1DAF227F11D9200051EAB /* UIImageView+Ext.swift in Sources */,
+				18C1DAF327F11D9200051EAB /* UIView+Ext.swift in Sources */,
 				18815BB327EFFDCB006EAB54 /* CallsViewController.swift in Sources */,
 				18815B8A27EFB886006EAB54 /* ChatViewController.swift in Sources */,
+				18C1DAFB27F11E2800051EAB /* Service.swift in Sources */,
 				18815B9A27EFB9E2006EAB54 /* CustomTabBarController.swift in Sources */,
-				18815BA227EFCD6B006EAB54 /* UIView+Ext.swift in Sources */,
 				18815BB127EFFDBB006EAB54 /* StatusViewController.swift in Sources */,
 				18815B9E27EFCC6C006EAB54 /* ChatView.swift in Sources */,
 				18815BB927F0EECF006EAB54 /* PaddingLabel.swift in Sources */,
 				18815BA427EFCE3B006EAB54 /* ChatTableViewCell.swift in Sources */,
+				18C1DAF927F11E2800051EAB /* ServiceError.swift in Sources */,
 				18815BB727EFFDEB006EAB54 /* SettingsViewController.swift in Sources */,
 				18815B8627EFB886006EAB54 /* AppDelegate.swift in Sources */,
 				18815B8827EFB886006EAB54 /* SceneDelegate.swift in Sources */,
 				18815BAF27EFE9F5006EAB54 /* ViewCode.swift in Sources */,
+				18C1DAFA27F11E2800051EAB /* GetWhatsAppService.swift in Sources */,
 				18815BB527EFFDD7006EAB54 /* CameraViewController.swift in Sources */,
 				18815BA827EFCFE1006EAB54 /* ChatCellViewModel.swift in Sources */,
 				18815BAA27EFD0E2006EAB54 /* WhatsAppModel.swift in Sources */,

@@ -11,7 +11,7 @@ class ChatView: UIView {
 
 	// MARK: - Views
 	lazy var tableView: UITableView = {
-		let tableView = UITableView()
+		let tableView = UITableView(frame: .zero, style: .grouped)
 		tableView.backgroundColor = .clear
 		return tableView
 	}()
@@ -42,6 +42,10 @@ extension ChatView: ViewCode {
 			tableView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
 			tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
 		])
+	}
+
+	func configureViews() {
+		self.backgroundColor = .systemBackground
 	}
 
 }

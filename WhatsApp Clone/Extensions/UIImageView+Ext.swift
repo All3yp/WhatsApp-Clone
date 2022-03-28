@@ -1,8 +1,8 @@
 //
 //  UIImageView+extension.swift
-//  Faangs
+//  WhatsApp Clone
 //
-//  Created by Alley Pereira on 21/03/22.
+//  Created by Alley Pereira on 26/03/22.
 //
 
 import UIKit
@@ -24,8 +24,12 @@ extension UIImageView {
 					self.transition(toImage: image)
 				}
 			} else {
-				URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) in
-					if let data = data, let response = response, ((response as? HTTPURLResponse)?.statusCode ?? 500) < 300, let image = UIImage(data: data) {
+				URLSession.shared.dataTask(
+					with: request,
+					completionHandler: { (data, response, _) in
+					if let data = data,
+					   let response = response, ((response as? HTTPURLResponse)?.statusCode ?? 500) < 300,
+					   let image = UIImage(data: data) {
 						let cachedData = CachedURLResponse(response: response, data: data)
 						cache.storeCachedResponse(cachedData, for: request)
 						DispatchQueue.main.async {
@@ -47,22 +51,5 @@ extension UIImageView {
 			},
 			completion: nil
 		)
-	}
-}
-
-@IBDesignable extension UIImageView {
-	@IBInspectable var borderColor: UIColor? {
-		get {
-			guard let color = self.layer.borderColor else { return nil }
-			return UIColor(cgColor: color)
-		}
-		set {
-			self.layer.borderColor = newValue?.cgColor
-		}
-	}
-
-	@IBInspectable var borderWidth: CGFloat {
-		get { self.layer.borderWidth }
-		set { self.layer.borderWidth = newValue }
 	}
 }

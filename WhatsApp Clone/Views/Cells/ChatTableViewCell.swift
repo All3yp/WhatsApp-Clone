@@ -10,10 +10,8 @@ import UIKit
 class ChatTableViewCell: UITableViewCell {
 
 	// MARK: Views
-
 	private var photoImageView: UIImageView = {
 		let imageView = UIImageView()
-		imageView.contentMode = .scaleAspectFill // Deletar dps
 		imageView.clipsToBounds = true
 		return imageView
 	}()
@@ -62,7 +60,7 @@ class ChatTableViewCell: UITableViewCell {
 	}()
 
 	func setupCellModel(_ model: ChatCellViewModel) {
-		self.photoImageView.image = UIImage(named: model.image)!
+		self.photoImageView.loadImage(from: model.image)
 		self.personNameLabel.text = model.name
 		self.messageLabel.text = model.message
 		self.hourLabel.text = model.hour
@@ -133,6 +131,7 @@ extension ChatTableViewCell: ViewCode {
 	}
 
 	func configureViews() {
+		self.selectionStyle = .none
 		self.photoImageView.layer.cornerRadius = 30
 		self.readLabel.layer.cornerRadius = 7.5
 	}
